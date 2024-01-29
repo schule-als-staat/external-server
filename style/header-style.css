@@ -1,0 +1,141 @@
+header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* Top Bar */
+header .top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #006d8f;
+    color: white;
+}
+
+header #title {
+    flex-grow: 1;
+    margin: 0;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    header #title {
+        font-size: 25px;
+    }
+
+    #sals-logo,
+    #mbg-logo {
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header .top-bar {
+        padding: 10px;
+    }
+
+    header #sals-logo,
+    header #mbg-logo {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header #title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header #title {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #sals-logo,
+    #mbg-logo {
+        height: 35px !important;
+    }
+}
+
+/* Navigation Bar*/
+header .nav-header {
+    display: none;
+}
+
+header .nav-container {
+    background-color: #20abd5;
+}
+
+header a:not(:has(img)),
+header #menu-title {
+    margin: 0;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.4s;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav a:hover {
+    background-color: #006e8f99;
+}
+
+header nav a.selected {
+    background-color: #006d8f;
+}
+
+@media only screen and (max-width: 800px) {
+    header .nav-header {
+        transition: border-bottom 0.2s ease-out;
+    }
+
+    .menu-icon {
+        padding-right: 12px;
+    }
+
+    header .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #20abd5;
+        transform-origin: top;
+        transition: transform 0.2s ease-out;
+    }
+
+    header nav a {
+        width: 100%;
+        border-radius: 0 0 0 0;
+    }
+
+    header .nav-header:has(~ nav.visible) {
+        border-bottom: white solid 1px;
+    }
+
+    header .nav-header:has(~ nav:not(.visible)) {
+        border-bottom: transparent solid 1px;
+    }
+
+    header nav:not(.visible) {
+        transform: scaleY(0);
+    }
+
+    header nav.visible {
+        transform: scaleY(1);
+    }
+}

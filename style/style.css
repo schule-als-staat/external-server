@@ -1,0 +1,76 @@
+@import "header-style.css";
+@import "footer-style.css";
+
+@font-face {
+    font-family: lato;
+    src: url("../font/Lato-Regular.ttf");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "lato";
+    background-color: #303133;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bannerimage {
+    width: 100%;
+}
+
+.content {
+    margin: 24px;
+    font-size: 18px;
+}
+
+.card {
+    background-color: #3b3b3b;
+    margin: 24px 0;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 1.5;
+    box-shadow: 0 0 10px -4px black;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #20abd5;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #006d8f;
+    font-size: 28px;
+}
+
+.card h4 {
+    margin: 0;
+    margin-bottom: 4px;
+    color: #20abd5;
+}
+
+.card p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card ul {
+    margin-bottom: 10px;
+}
+
+.card ul {
+    margin-left: 10px;
+}
+
+a {
+    color: #20abd5;
+}
