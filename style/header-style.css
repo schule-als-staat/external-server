@@ -76,6 +76,7 @@ header a:not(:has(img)),
 header #menu-title {
     margin: 0;
     padding: 10px 12px;
+    box-sizing: border-box;
     color: white;
     text-decoration: none;
     border-radius: 0 0 10px 10px;
