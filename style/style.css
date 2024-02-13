@@ -79,3 +79,7 @@ a {
     max-height: 300px;
     max-width: 100%;
 }
+
+.video{
+    max-width: 100%;
+}
