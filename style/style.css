@@ -39,6 +39,11 @@ body {
     box-shadow: 0 0 10px -4px black;
 }
 
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
 .card h2 {
     margin-top: 0;
     color: #20abd5;
