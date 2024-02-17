@@ -68,6 +68,10 @@ body {
     margin-bottom: 10px;
 }
 
+.card p:last-child {
+    margin-bottom: 0;
+}
+
 .card p,
 .card ul {
     margin-bottom: 10px;
