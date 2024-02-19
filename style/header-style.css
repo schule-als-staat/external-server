@@ -97,7 +97,7 @@ header nav a.selected {
     background-color: #006d8f;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     header .nav-header {
         transition: border-bottom 0.2s ease-out;
     }
