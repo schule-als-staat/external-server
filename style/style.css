@@ -89,10 +89,31 @@ a {
 }
 
 .partypic{
-    max-height: 300px;
     max-width: 100%;
 }
 
 .video{
     max-width: 100%;
+}
+
+.electionpic{
+    max-width: 100%;
+}
+
+
+td, th {
+    border: 2px solid black;
+    padding: 20px;
+    background-color:#006d8f
+
+}
+
+
+th, caption {
+  background-color:#20abd5;
+}
+
+table{
+ width: 100%;
+ margin-top: 10px;
 }
