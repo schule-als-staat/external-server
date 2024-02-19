@@ -48,19 +48,19 @@ body {
     border-radius: 10px;
 }
 
-.card h2 {
+.card h1 {
     margin-top: 0;
     color: #20abd5;
 }
 
-.card h3 {
+.card h2 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #006d8f;
     font-size: 28px;
 }
 
-.card h4 {
+.card h3 {
     margin: 0;
     margin-bottom: 4px;
     color: #20abd5;
