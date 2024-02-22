@@ -73,7 +73,7 @@ header .nav-container {
     background-color: #20abd5;
 }
 
-header a:not(:has(img)),
+.nav-container a,
 header #menu-title {
     margin: 0;
     padding: 10px 12px;
