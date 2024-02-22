@@ -42,6 +42,11 @@ body {
     box-shadow: 0 0 10px -4px black;
 }
 
+.card * {
+    /* remove the gap at the bottom edge of the card */
+    vertical-align: bottom;
+}
+
 .card img {
     width: 100%;
     max-width: 400px;
