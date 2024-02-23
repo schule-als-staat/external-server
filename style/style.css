@@ -123,3 +123,10 @@ table{
  max-width: 400px;
  margin-top: 10px;
 }
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
