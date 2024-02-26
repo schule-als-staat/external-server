@@ -97,6 +97,10 @@ a {
     max-width: 100%;
 }
 
+.card video {
+    border-radius: 10px;
+}
+
 
 td, th {
     border: 2px solid black;
