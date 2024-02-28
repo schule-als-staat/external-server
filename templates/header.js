@@ -2,7 +2,7 @@
     const header = `
         <header>
             <div class="top-bar">
-                <a href="index.html">
+                <a href="news.html">
                     <img
                         id="sals-logo"
                         src="images/sals-white.svg"
@@ -37,7 +37,7 @@
                     />
                 </div>
                 <nav>
-                    <a id="news" href="index.html">News</a>
+                    <a id="news" href="news.html">News</a>
                     <a id="projekt" href="projekt.html">Projekt</a>
                     <a id="termine" href="termine.html">Termine</a>
                     <a id="verfassung" href="verfassung.html">Verfassung</a>
