@@ -38,6 +38,8 @@
                 </a>
 
                 <p>Kontakt:<br /><a href="mailto:sals@mbg-bk.de">sals@mbg-bk.de</a></p>
+                <p>Support:<br /><a href="mailto:support@salsmbg.de">support@salsmbg.de</a></p>
+
             </div>
         </footer>
     `.trim();
