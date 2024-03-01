@@ -84,6 +84,10 @@ header #menu-title {
     transition: background-color 0.4s;
 }
 
+.nav-container a:first-child {
+    border-bottom-left-radius: 0;
+}
+
 header nav {
     display: flex;
     flex-direction: row;
