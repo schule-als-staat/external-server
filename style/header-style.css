@@ -121,7 +121,7 @@ header nav a.selected {
         transition: transform 0.2s ease-out;
     }
 
-    header nav a {
+    header .nav-container a {
         width: 100%;
         border-radius: 0 0 0 0;
     }
