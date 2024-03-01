@@ -109,6 +109,7 @@ header nav a.selected {
     header .nav-header {
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
     }
 
     header nav {

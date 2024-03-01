@@ -25,7 +25,10 @@
             </div>
 
             <div class="nav-container">
-                <div class="nav-header">
+                <div
+                    class="nav-header"
+                    onclick="document.querySelector('nav').classList.toggle('visible')"
+                >
                     <p id="menu-title">Menü</p>
                     <img
                         class="menu-icon"
@@ -33,7 +36,6 @@
                         alt="Menü"
                         width="40"
                         height="40"
-                        onclick="document.querySelector('nav').classList.toggle('visible')"
                     />
                 </div>
                 <nav>
