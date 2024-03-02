@@ -59,7 +59,6 @@ body {
     color: #20abd5;
 }
 
-
 .card h2 {
     margin-top: 0;
     margin-bottom: 20px;
@@ -113,7 +112,7 @@ a {
     }
 }
 
-.image{
+.image {
     max-width: 100%;
 }
 
@@ -121,34 +120,37 @@ a {
     border-radius: 10px;
 }
 
-
-td, th {
+td,
+th {
     border: 2px solid black;
     padding: 20px;
-    background-color:#006d8f
-
+    background-color: #006d8f;
 }
 
-
-th, caption {
-  background-color:#20abd5;
+th,
+caption {
+    background-color: #20abd5;
 }
 
-table{
- width: 100%;
- max-width: 400px;
- margin-top: 10px;
+table {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
 }
 
-.horizontal{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.grid-elections {
+    --column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, max(300px, calc(50% - var(--column-gap)))), 1fr)
+    );
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: var(--column-gap);
 }
 
-video{
+video {
     width: 100%;
     max-width: 400px;
 }
