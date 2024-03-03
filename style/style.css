@@ -51,7 +51,6 @@ body {
 .card img {
     width: 100%;
     max-width: 400px;
-    border-radius: 10px;
 }
 
 .card h1 {
@@ -112,10 +111,6 @@ a {
     }
 }
 
-.image {
-    max-width: 100%;
-}
-
 .card video {
     border-radius: 10px;
 }
@@ -138,17 +133,32 @@ table {
     margin-top: 10px;
 }
 
-.grid-elections {
-    --column-gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(100%, max(300px, calc(50% - var(--column-gap)))), 1fr)
-    );
-    justify-items: center;
-    row-gap: 10px;
-    column-gap: var(--column-gap);
+.space-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* min space between: 10px */
+    gap: 10px;
 }
+
+.space-vertical {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* min space between: 10px */
+    gap: 10px;
+}
+
+.space-vertical img, .space-horizontal img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 
 video {
     width: 100%;
