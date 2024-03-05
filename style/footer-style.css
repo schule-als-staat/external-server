@@ -1,32 +1,25 @@
+/*
+Do not import 'values.css' here!
+This would result in importing 'values.css' twice because
+this file is imported into the main style which already
+imports the values
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     display: flex;
     flex-direction: row;
-    background-color: #006d8f;
-    color: white;
-    padding: 32px 32px;
+    background-color: var(--primary-color);
+    color: var(--color-on-primary);
+    padding: var(--root-spacing);
 }
 
 footer .column {
     flex: 50%;
-}
-
-footer p {
-    margin-top: 0;
-}
-
-footer nav a {
-    display: block;
-    margin-top: 10px;
-}
-
-footer a.icon {
-    display: inline-block;
-    padding: 4px;
-    background-color: #20abd5;
-    border-radius: 8px;
-    margin-right: 8px;
-    /* remove whitespace */
-    font-size: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -37,4 +30,20 @@ footer a.icon {
     footer .column {
         flex: 100%;
     }
+}
+
+footer nav a {
+    display: block;
+    margin-top: var(--spacing);
+}
+
+footer .icon {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    padding: 4px;
+    margin-right: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: var(--border-radius);
+    /* remove whitespace */
+    font-size: 0;
 }

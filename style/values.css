@@ -1,0 +1,22 @@
+/* This file defines the main colors, dimensions and
+ animation durations used on the SalS website */
+:root {
+    /* colors */
+    --primary-color: #006d8f;
+    --secondary-color: #20abd5;
+    --color-on-primary: white;
+    --color-on-secondary: white;
+
+    --background-color: #303133;
+    --surface-color: #3b3b3b;
+    --text-color: white;
+
+    /* dimensions */
+    --border-radius: 10px;
+    --root-spacing: 24px;
+    --spacing: 10px;
+    --media-max-width: 400px;
+
+    /* animations */
+    --transition-duration: 0.3s;
+}

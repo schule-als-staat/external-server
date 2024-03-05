@@ -1,3 +1,15 @@
+/*
+Do not import 'values.css' here!
+This would result in importing 'values.css' twice because
+this file is imported into the main style which already
+imports the values
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -5,18 +17,20 @@ header {
     z-index: 10;
 }
 
-/* Top Bar */
-header .top-bar {
+/* || Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--color-on-primary);
+    padding: var(--spacing) var(--root-spacing);
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #006d8f;
-    color: white;
 }
 
-header #title {
+#title {
+    color: var(--color-on-primary);
     flex-grow: 1;
     margin: 0;
     margin-left: 20px;
@@ -24,7 +38,7 @@ header #title {
 }
 
 @media only screen and (max-width: 900px) {
-    header #title {
+    #title {
         font-size: 25px;
     }
 
@@ -35,24 +49,24 @@ header #title {
 }
 
 @media only screen and (max-width: 800px) {
-    header .top-bar {
-        padding: 10px;
+    .top-bar {
+        padding: var(--spacing);
     }
 
-    header #sals-logo,
-    header #mbg-logo {
+    #sals-logo,
+    #mbg-logo {
         height: 40px;
     }
 }
 
 @media only screen and (max-width: 650px) {
-    header #title {
+    #title {
         font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    header #title {
+    #title {
         display: none;
     }
 }
@@ -64,85 +78,84 @@ header #title {
     }
 }
 
-/* Navigation Bar*/
-header .nav-header {
+/* || Navigation Bar*/
+.nav-header {
     display: none;
 }
 
-header .nav-container {
-    background-color: #20abd5;
+.nav-container {
+    background-color: var(--secondary-color);
 }
 
+.nav-container nav {
+    display: flex;
+    flex-direction: row;
+}
+
+/* || Navigation links */
 .nav-container a,
-header #menu-title {
-    margin: 0;
-    padding: 10px 12px;
-    box-sizing: border-box;
-    color: white;
+#menu-title {
+    color: var(--color-on-secondary);
     text-decoration: none;
-    border-radius: 0 0 10px 10px;
-    transition: background-color 0.4s;
+    margin: 0;
+    padding: var(--spacing);
+    box-sizing: border-box;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    transition: background-color var(--transition-duration);
 }
 
 .nav-container a:first-child {
     border-bottom-left-radius: 0;
 }
 
-header nav {
-    display: flex;
-    flex-direction: row;
+.nav-container a:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 60%, transparent);
 }
 
-header nav a:hover {
-    background-color: #006e8f99;
+.nav-container a.selected {
+    background-color: var(--primary-color);
 }
 
-header nav a.selected {
-    background-color: #006d8f;
-}
-
+/* Dropdown navigation for smaller screens */
 @media only screen and (max-width: 900px) {
-    header .nav-header {
-        transition: border-bottom 0.2s ease-out;
-    }
-
-    .menu-icon {
-        padding-right: 12px;
-    }
-
-    header .nav-header {
+    .nav-header {
         display: flex;
         justify-content: space-between;
         cursor: pointer;
+        transition: border-bottom var(--transition-duration) ease-out;
     }
 
-    header nav {
+    .menu-icon {
+        padding-right: var(--spacing);
+    }
+
+    .nav-container nav {
         flex-direction: column;
         position: absolute;
         width: 100%;
-        background-color: #20abd5;
+        background-color: var(--secondary-color);
         transform-origin: top;
-        transition: transform 0.2s ease-out;
+        transition: transform var(--transition-duration) ease-out;
     }
 
-    header .nav-container a {
+    .nav-container a {
         width: 100%;
-        border-radius: 0 0 0 0;
+        border-radius: 0;
     }
 
-    header .nav-header:has(~ nav.visible) {
-        border-bottom: white solid 1px;
-    }
-
-    header .nav-header:has(~ nav:not(.visible)) {
+    .nav-header {
         border-bottom: transparent solid 1px;
     }
 
-    header nav:not(.visible) {
+    .nav-header:has(~ nav.visible) {
+        border-bottom: var(--color-on-secondary) solid 1px;
+    }
+
+    .nav-container nav {
         transform: scaleY(0);
     }
 
-    header nav.visible {
+    .nav-container nav.visible {
         transform: scaleY(1);
     }
 }
