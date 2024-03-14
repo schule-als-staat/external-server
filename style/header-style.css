@@ -11,7 +11,8 @@ imports the values
 }
 
 header {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 0;
     z-index: 10;
@@ -19,7 +20,7 @@ header {
 
 /* || Top Bar */
 .top-bar {
-    background-color: var(--primary-color);
+    background-color: var(--color-primary-a0);
     color: var(--color-on-primary);
     padding: var(--spacing) var(--root-spacing);
 
@@ -72,6 +73,7 @@ header {
 }
 
 @media only screen and (max-width: 400px) {
+
     #sals-logo,
     #mbg-logo {
         height: 35px !important;
@@ -84,7 +86,7 @@ header {
 }
 
 .nav-container {
-    background-color: var(--secondary-color);
+    background-color: var(--color-primary-a20);
 }
 
 .nav-container nav {
@@ -95,7 +97,7 @@ header {
 /* || Navigation links */
 .nav-container a,
 #menu-title {
-    color: var(--color-on-secondary);
+    color: var(--color-on-primary);
     text-decoration: none;
     margin: 0;
     padding: var(--spacing);
@@ -109,11 +111,11 @@ header {
 }
 
 .nav-container a:hover {
-    background-color: color-mix(in srgb, var(--primary-color) 60%, transparent);
+    background-color: var(--color-primary-a10)
 }
 
 .nav-container a.selected {
-    background-color: var(--primary-color);
+    background-color: var(--color-primary-a0);
 }
 
 /* Dropdown navigation for smaller screens */
@@ -133,7 +135,7 @@ header {
         flex-direction: column;
         position: absolute;
         width: 100%;
-        background-color: var(--secondary-color);
+        background-color: var(--color-primary-a20);
         transform-origin: top;
         transition: transform var(--transition-duration) ease-out;
     }

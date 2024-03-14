@@ -15,8 +15,8 @@
 
 body {
     font-family: "lato";
-    background-color: var(--background-color);
-    color: white;
+    background-color: var(--color-background);
+    color: var(--color-text);
     min-height: 100vh;
 
     word-wrap: break-word;
@@ -34,7 +34,7 @@ body {
 }
 
 .card {
-    background-color: var(--surface-color);
+    background-color: var(--color-surface);
     margin: var(--root-spacing) 0;
     padding: var(--spacing);
     border-radius: var(--border-radius);
@@ -49,7 +49,7 @@ body {
 
 .card :last-child {
     margin-bottom: 0;
-}
+}   
 
 /* || Text */
 p {
@@ -62,18 +62,18 @@ p:has(+ ul) {
 
 h1 {
     margin-bottom: var(--spacing);
-    color: var(--secondary-color);
+    color: var(--color-primary-a0);
 }
 
 h2 {
     margin-bottom: var(--spacing);
-    color: var(--primary-color);
+    color: var(--color-primary-a0);
     font-size: 28px;
 }
 
 h3 {
     margin-bottom: 4px;
-    color: var(--secondary-color);
+    color: var(--color-accent-a0);
 }
 
 ul {
@@ -82,7 +82,7 @@ ul {
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--color-accent-a0);
 }
 
 @media only screen and (max-width: 600px) {
@@ -124,17 +124,22 @@ table {
     width: 100%;
     max-width: var(--media-max-width);
     margin-top: var(--spacing);
+    border-collapse: collapse;
 }
 
 td,
 th {
-    border: 2px solid black;
+    border: 2px solid var(--color-border);
     padding: var(--border-radius);
-    background-color: var(--primary-color);
+    margin: 0;
 }
 
+tr:nth-child(odd) {
+    background-color: var(--color-table-odd-row);
+}   
+
 th {
-    background-color: var(--secondary-color);
+    background-color: var(--color-table-header);
 }
 
 /* || Utility */

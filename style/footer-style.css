@@ -13,7 +13,7 @@ imports the values
 footer {
     display: flex;
     flex-direction: row;
-    background-color: var(--primary-color);
+    background-color: var(--color-primary-a0);
     color: var(--color-on-primary);
     padding: var(--root-spacing);
 }
@@ -39,7 +39,7 @@ footer nav a {
 
 footer .icon {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: var(--color-accent-a0);
     padding: 4px;
     margin-right: var(--spacing);
     margin-bottom: var(--spacing);
