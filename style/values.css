@@ -13,8 +13,8 @@
 
 
     /* ACCENT COLORS */
-
-    --color-accent-a0: #69008f;
+    --color-accent-a0: #69008f; /* to dark for the links so next line for testing */
+    --color-accent-a0: #7a00a6; 
     --color-accent-a10: #540b71;
     --color-accent-a20: #400f54;
     --color-accent-a30: #2d0f39;
