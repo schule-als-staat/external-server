@@ -12,13 +12,22 @@
     --color-on-primary: #ffffff;
 
 
-    /* ACCENT COLORS */
-    --color-accent-a0: #69008f; /* to dark for the links so next line for testing */
-    --color-accent-a0: #7a00a6; 
+    /* ORIGINAL ACCENT COLORS */
+
+    /* --color-accent-a0: #69008f;
     --color-accent-a10: #540b71;
     --color-accent-a20: #400f54;
     --color-accent-a30: #2d0f39;
     --color-accent-a40: #1b0b20;
+    --color-on-accent: #ffffff; */
+
+    /* LIGHTER ACCENT COLORS */
+
+    --color-accent-a0: #7a00a6;
+    --color-accent-a10: #610d83;
+    --color-accent-a20: #4a1261;
+    --color-accent-a30: #331141;
+    --color-accent-a40: #1e0d23;
     --color-on-accent: #ffffff;
 
 
