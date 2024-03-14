@@ -1,5 +1,7 @@
 /* This file defines the main colors, dimensions and
  animation durations used on the SalS website */
+
+ 
 :root {
 
     /* PRIMARY COLORS */
@@ -49,41 +51,49 @@
     --color-neutral-a50: #000000;
 
 
+    /* MAIN COLORS */
+
     --color-background: #1c1b1e;
     --color-surface: #25242a;
     --color-text: white;
     --color-border: #3a3a3a;
 
+
+    /* TABLE COLORS */
+
     --color-table-header: #00000055;
     --color-table-odd-row: #00000033;
 
 
-    /* dimensions */
+    /* DIMENSIONS */
+
     --border-radius: 10px;
     --root-spacing: 24px;
     --spacing: 10px;
     --media-max-width: 400px;
 
 
-    /* animations */
+    /* ANIMATIONS */
+
     --transition-duration: 0.3s;
 }
 
 @media (prefers-color-scheme: light) {
     :root {
 
-        /* PRIMARY COLORS */
+        /* MAIN COLORS */
 
         --color-background: #f5f5f5;
         --color-surface: #ffffff;
         --color-text: #000000;
         --color-border: #e0e0e0;
 
+        /* TABLE COLORS */
+
         --color-table-header: #00000055;
-        --color-table-even-row: #00000011;
         --color-table-odd-row: #00000022;
 
-        /* NEUTRAL COLORS */
+        /* PRIMARY COLORS */
 
         --color-primary-a0: #20abd5;
         --color-primary-a10: #2486a6;
@@ -99,23 +109,5 @@
         --color-accent-a20: #611e7a;
         --color-accent-a30: #421951;
         --color-accent-a40: #24122a;
-
-
-        /* SEMANTIC COLORS */
-
-        --color-Danger-a0: #b41c2b;
-        --color-Success-a0: #009f42;
-        --color-Warning-a0: #cc8800;
-        --color-Info-a0: #388cfa;
-
-
-        /* NEUTRAL COLORS */
-
-        --color-neutral-a0: #ffffff;
-        --color-neutral-a10: #c6c6c6;
-        --color-neutral-a20: #919191;
-        --color-neutral-a30: #5e5e5e;
-        --color-neutral-a40: #303030;
-        --color-neutral-a50: #000000;
     }
 }
