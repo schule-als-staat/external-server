@@ -50,8 +50,7 @@
                     <a id="unterstützung" href="unterstützung.html">Unterstützung</a>
                     <!--<a id="parlament" href="parlament.html">Parlament</a> -->
                     
-                    <img id="theme-switch" src="/images/sun.svg" alt="icon-theme" height="30px" onclick="switch-theme()">
-                    
+                    <img id="theme-switch" src="" alt="theme-switch" onclick="switchTheme()">                    
                 </nav>
             </div>
         </header>
@@ -73,4 +72,24 @@
     }
 
     placeholder.parentNode.replaceChild(headerNode, placeholder);
+
+    document.addEventListener("DOMContentLoaded", function () {
+        updateThemeIcon();
+    });
 })();
+
+function switchTheme() {
+    document.body.classList.toggle("light");
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    console.log("DOMContentLoaded");
+    if (document.body.classList.contains("light")) {
+        document.getElementById("theme-switch").src = "../images/moon.svg";
+        console.log("light");
+    } else {
+        document.getElementById("theme-switch").src = "../images/sun.svg"; // Assuming you have a default image for the dark theme
+        console.log("dark");
+    }
+}

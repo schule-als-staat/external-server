@@ -1,10 +1,15 @@
 /* This file defines the main colors, dimensions and
  animation durations used on the SalS website */
 
- 
+
 :root {
 
-    /* PRIMARY COLORS */
+    /* ICONS */ 
+
+    --icon-moon: url("/images/moon.svg");
+    --icon-sun: url("/images/sun.svg");
+
+    /* PRIMARY COLORS - not fitted to the lighter accent color*/
 
     --color-primary-a0: #006d8f;
     --color-primary-a10: #105771;
@@ -55,7 +60,7 @@
 
     --color-background: #1c1b1e;
     --color-surface: #25242a;
-    --color-text: white;
+    --color-text: #ffffff;
     --color-border: #3a3a3a;
 
 
@@ -78,36 +83,34 @@
     --transition-duration: 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
+body.light {
 
-        /* MAIN COLORS */
+    /* MAIN COLORS */
 
-        --color-background: #f5f5f5;
-        --color-surface: #ffffff;
-        --color-text: #000000;
-        --color-border: #e0e0e0;
+    --color-background: #f5f5f5;
+    --color-surface: #ffffff;
+    --color-text: #000000;
+    --color-border: #e0e0e0;
 
-        /* TABLE COLORS */
+    /* TABLE COLORS */
 
-        --color-table-header: #00000055;
-        --color-table-odd-row: #00000022;
+    --color-table-header: #00000055;
+    --color-table-odd-row: #00000022;
 
-        /* PRIMARY COLORS */
+    /* PRIMARY COLORS */
 
-        --color-primary-a0: #20abd5;
-        --color-primary-a10: #2486a6;
-        --color-primary-a20: #23637a;
-        --color-primary-a30: #1d4250;
-        --color-primary-a40: #15242a;
+    --color-primary-a0: #20abd5;
+    --color-primary-a10: #2486a6;
+    --color-primary-a20: #23637a;
+    --color-primary-a30: #1d4250;
+    --color-primary-a40: #15242a;
 
 
-        /* ACCENT COLORS */
+    /* ACCENT COLORS */
 
-        --color-accent-a0: #a520d5;
-        --color-accent-a10: #8220a6;
-        --color-accent-a20: #611e7a;
-        --color-accent-a30: #421951;
-        --color-accent-a40: #24122a;
-    }
+    --color-accent-a0: #a520d5;
+    --color-accent-a10: #8220a6;
+    --color-accent-a20: #611e7a;
+    --color-accent-a30: #421951;
+    --color-accent-a40: #24122a;
 }
