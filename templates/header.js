@@ -49,6 +49,9 @@
                     <a id="unternehmen" href="unternehmen.html">Unternehmen</a>
                     <a id="unterstützung" href="unterstützung.html">Unterstützung</a>
                     <!--<a id="parlament" href="parlament.html">Parlament</a> -->
+                    
+                    <img id="theme-switch" src="/images/sun.svg" alt="icon-theme" height="30px" onclick="switch-theme()">
+                    
                 </nav>
             </div>
         </header>
