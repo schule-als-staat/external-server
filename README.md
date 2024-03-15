@@ -23,3 +23,5 @@
 | ![White](https://via.placeholder.com/15/ffffff/000000?text=+)        | `#ffffff` | Text       |
 | ![Cerulean](https://via.placeholder.com/15/006d8f/000000?text=+)     | `#006d8f` | Primary    |
 | ![Grape](https://via.placeholder.com/15/7a00a6/000000?text=+)        | `#7a00a6` | Accent     |
+
+[Colors visualized](https://coolors.co/1c1b1e-25242a-ffffff-006d8f-7a00a6)
