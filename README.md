@@ -2,11 +2,24 @@
 
 ## Used colors for the project
 
+### Light Mode
+
 | Color                                                                | Hex Code  | Use Case   |
 | -------------------------------------------------------------------- | --------- | ---------- |
-| ![Jet](https://via.placeholder.com/15/303133/000000?text=+)          | `#303133` | Background |
-| ![White](https://via.placeholder.com/15/FFFFFF/000000?text=+)        | `#FFFFFF` | Text       |
-| ![Cerulean](https://via.placeholder.com/15/006D8F/000000?text=+)     | `#006D8F` | Primary    |
-| ![Pacific cyan](https://via.placeholder.com/15/20ABD5/000000?text=+) | `#20ABD5` | Secondary  |
+| ![White Smoke](https://via.placeholder.com/15/f5f5f5/000000?text=+)  | `#f5f5f5` | Background |
+| ![White](https://via.placeholder.com/15/ffffff/000000?text=+)        | `#ffffff` | Surface    |
+| ![Black](https://via.placeholder.com/15/000000/000000?text=+)        | `#000000` | Text       |
+| ![Cerulean](https://via.placeholder.com/15/20abd5/000000?text=+)     | `#20abd5` | Primary    |
+| ![Grape](https://via.placeholder.com/15/a520d5/000000?text=+)        | `#a520d5` | Accent     |
 
-[Colors visualized](https://coolors.co/303133-ffffff-006d8f-20abd5)
+[Colors visualized](https://coolors.co/f5f5f5-ffffff-000000-006d8f-7a00a6)
+
+### Dark Mode
+
+| Color                                                                | Hex Code  | Use Case   |
+| -------------------------------------------------------------------- | --------- | ---------- |
+| ![Raisin Black](https://via.placeholder.com/15/1c1b1e/000000?text=+) | `#1c1b1e` | Background |
+| ![Raisin Black](https://via.placeholder.com/15/25242a/000000?text=+) | `#25242a` | Surface    |
+| ![White](https://via.placeholder.com/15/ffffff/000000?text=+)        | `#ffffff` | Text       |
+| ![Cerulean](https://via.placeholder.com/15/006d8f/000000?text=+)     | `#006d8f` | Primary    |
+| ![Grape](https://via.placeholder.com/15/7a00a6/000000?text=+)        | `#7a00a6` | Accent     |
