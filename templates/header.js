@@ -49,8 +49,8 @@
                     <a id="unternehmen" href="unternehmen.html">Unternehmen</a>
                     <a id="unterstützung" href="unterstützung.html">Unterstützung</a>
                     <!--<a id="parlament" href="parlament.html">Parlament</a> -->
-                    
-                    <img id="theme-switch" src="" alt="theme-switch" onclick="switchTheme()">                    
+
+                    <img id="theme-switch" src="" alt="theme-switch" onclick="switchTheme()">
                 </nav>
             </div>
         </header>
@@ -73,8 +73,22 @@
 
     placeholder.parentNode.replaceChild(headerNode, placeholder);
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
+        const allElements = document.querySelectorAll("*");
+        // disable css transitions to prevent flashing of the website
+        allElements.forEach((element) => {
+            element.style.transitionDuration = "0s";
+        });
+
+        // update the theme
         updateThemeIcon();
+
+        // reenable css transitions
+        const style = getComputedStyle(document.body);
+        const duration = style.getPropertyValue("--transition-duration");
+        allElements.forEach((element) => {
+            element.style.transitionDuration = duration;
+        });
     });
 })();
 

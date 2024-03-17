@@ -73,7 +73,6 @@ header {
 }
 
 @media only screen and (max-width: 400px) {
-
     #sals-logo,
     #mbg-logo {
         height: 35px !important;
@@ -111,10 +110,28 @@ header {
 }
 
 .nav-container a:hover {
-    background-color: var(--color-primary-a10)
+    background-color: var(--color-primary-a10);
 }
 
 .nav-container a.selected {
+    background-color: var(--color-primary-a0);
+}
+
+/* || Icon for switching themes */
+#theme-switch {
+    width: 1.5em;
+    padding: 0 var(--spacing);
+    margin-left: auto;
+    align-self: stretch;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    transition: background-color var(--transition-duration);
+}
+
+#theme-switch:hover {
+    background-color: var(--color-primary-a10);
+}
+
+#theme-switch:active {
     background-color: var(--color-primary-a0);
 }
 
@@ -160,9 +177,11 @@ header {
     .nav-container nav.visible {
         transform: scaleY(1);
     }
-}
-#theme-switch {
-    height: 1.5rem;
-    width: 1.5rem;
-    display: none;
+
+    #theme-switch {
+        height: 1.5rem;
+        width: 100%;
+        border-radius: 0;
+        padding: var(--spacing) 0;
+    }
 }

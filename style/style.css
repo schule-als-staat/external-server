@@ -11,6 +11,10 @@
 * {
     margin: 0;
     padding: 0;
+
+    /* Animation when switching themes */
+    transition-property: background-color, color;
+    transition-duration: var(--transition-duration);
 }
 
 body {
