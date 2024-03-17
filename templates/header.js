@@ -79,17 +79,44 @@
 })();
 
 function switchTheme() {
-    document.body.classList.toggle("light");
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "light");
+    }
+    if (document.body.classList.contains("light")) {
+        localStorage.setItem("theme", "dark");
+    }
     updateThemeIcon();
 }
 
 function updateThemeIcon() {
-    console.log("DOMContentLoaded");
-    if (document.body.classList.contains("light")) {
-        document.getElementById("theme-switch").src = "../images/moon.svg";
-        console.log("light");
+    // Überprüfen, ob das bevorzugte Farbschema des Benutzers "dark" ist
+    const prefersDarkScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches;
+
+    const prefersLightScheme = window.matchMedia(
+        "(prefers-color-scheme: light)"
+    ).matches;
+
+    // Überprüfen, ob bereits ein Theme im localStorage gespeichert ist
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+        document.querySelector("img#theme-switch").src = "images/sun.svg";
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+    } else if (storedTheme === "light") {
+        document.querySelector("img#theme-switch").src = "images/moon.svg";
+        document.body.classList.add("light");
+        document.body.classList.remove("dark");
     } else {
-        document.getElementById("theme-switch").src = "../images/sun.svg"; // Assuming you have a default image for the dark theme
-        console.log("dark");
+        if (prefersDarkScheme) {
+            document.querySelector("img#theme-switch").src = "images/sun.svg";
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+        } else if (prefersLightScheme) {
+            document.querySelector("img#theme-switch").src = "images/moon.svg";
+            document.body.classList.add("light");
+            document.body.classList.remove("dark");
+        }
     }
 }
