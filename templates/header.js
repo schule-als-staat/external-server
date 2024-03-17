@@ -74,7 +74,7 @@
     placeholder.parentNode.replaceChild(headerNode, placeholder);
 
     document.addEventListener("DOMContentLoaded", () => {
-        const allElements = document.querySelectorAll("*");
+        const allElements = document.querySelectorAll("body, body *");
         // disable css transitions to prevent flashing of the website
         allElements.forEach((element) => {
             element.style.transitionDuration = "0s";
