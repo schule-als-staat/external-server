@@ -42,13 +42,17 @@
                     <a id="news" href="news.html">News</a>
                     <a id="projekt" href="projekt.html">Projekt</a>
                     <a id="termine" href="termine.html">Termine</a>
+                    <a id="genehmigteunternehmen" href="genehmigteUnternehmen.html">Genehmigte Unternehmen</a>
+                    <a id="offeneStellen" href="offeneStellen.html">Offene Stellen</a>
+                    <a id="staatsdienst" href="staatsdienst.html">Staatsdienst</a>
+                    <a id="unternehmen" href="unternehmen.html">Unternehmen</a>
+                    <a id="parlament" href="parlament.html">Parlament</a>
                     <a id="verfassung" href="verfassung.html">Verfassung</a>
                     <a id="parteien" href="parteien.html">Parteien</a>
                     <a id="königspaar" href="königspaar.html">Königspaar</a>
-                    <a id="staatsdienst" href="staatsdienst.html">Staatsdienst</a>
-                    <a id="unternehmen" href="unternehmen.html">Unternehmen</a>
+                    
                     <a id="unterstützung" href="unterstützung.html">Unterstützung</a>
-                    <!--<a id="parlament" href="parlament.html">Parlament</a> -->
+                    
 
                     <img id="theme-switch" src="" alt="theme-switch" onclick="switchTheme()">
                 </nav>
