@@ -105,8 +105,12 @@ header {
     transition: background-color var(--transition-duration);
 }
 
-.nav-container a:first-child {
+.nav-container nav :first-child {
     border-bottom-left-radius: 0;
+}
+
+.nav-container nav :last-child {
+    border-bottom-right-radius: 0 !important;
 }
 
 .nav-container a:hover {
