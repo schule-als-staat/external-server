@@ -171,3 +171,58 @@ th {
     height: auto;
     object-fit: contain;
 }
+
+.error {
+    /* but me in the middle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    margin: 20px;
+    text-align: center;
+    color: var(--color-danger);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@keyframes flicker {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    50% {
+        text-shadow: 0 0 100px;
+    }
+
+    100% {
+        text-shadow: 0 0 0;
+    }
+}
+
+.error h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-danger);
+    animation: flicker 10s infinite ease-in-out;
+}
+
+.error *:hover {
+    color: var(--color-warning);
+}
+
+
+.error p,a {
+    font-size: 24px;
+    margin-bottom: var(--spacing);
+}
+
+.error a {
+    color: var(--color-warning);
+    text-decoration: none;
+}
+
+.error a:hover {
+    color: var(--color-accent-a0);
+}
