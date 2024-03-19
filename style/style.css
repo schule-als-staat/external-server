@@ -213,7 +213,8 @@ th {
 }
 
 
-.error p,a {
+.error p,
+.error a {
     font-size: 24px;
     margin-bottom: var(--spacing);
 }
