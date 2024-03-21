@@ -1,4 +1,13 @@
-(() => {
+function updateThemeSwitchIcon() {
+    const themeIcon = document.querySelector("img#theme-switch");
+    if (document.body.classList.contains("dark")) {
+        themeIcon.src = "images/sun.svg";
+    } else {
+        themeIcon.src = "images/moon.svg";
+    }
+}
+
+(function () {
     const header = `
         <header>
             <div class="top-bar">
@@ -60,7 +69,6 @@
         </header>
     `.trim();
 
-    // get the `website` attribute from the script tag
     const selectedNavItem = document.currentScript.getAttribute("website");
     const placeholder = document.querySelector("script#header-placeholder");
 
@@ -68,7 +76,6 @@
     temp.innerHTML = header;
     const headerNode = temp.firstChild;
 
-    // select the current website
     if (selectedNavItem != null) {
         headerNode
             .querySelector("a#" + selectedNavItem)
@@ -79,15 +86,10 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         const allElements = document.querySelectorAll("body, body *");
-        // disable css transitions to prevent flashing of the website
         allElements.forEach((element) => {
             element.style.transitionDuration = "0s";
         });
 
-        // update the theme
-        updateThemeIcon();
-
-        // reenable css transitions
         const style = getComputedStyle(document.body);
         const duration = style.getPropertyValue("--transition-duration");
         allElements.forEach((element) => {
@@ -95,46 +97,3 @@
         });
     });
 })();
-
-function switchTheme() {
-    if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "light");
-    }
-    if (document.body.classList.contains("light")) {
-        localStorage.setItem("theme", "dark");
-    }
-    updateThemeIcon();
-}
-
-function updateThemeIcon() {
-    // Überprüfen, ob das bevorzugte Farbschema des Benutzers "dark" ist
-    const prefersDarkScheme = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-    ).matches;
-
-    const prefersLightScheme = window.matchMedia(
-        "(prefers-color-scheme: light)"
-    ).matches;
-
-    // Überprüfen, ob bereits ein Theme im localStorage gespeichert ist
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-        document.querySelector("img#theme-switch").src = "images/sun.svg";
-        document.body.classList.add("dark");
-        document.body.classList.remove("light");
-    } else if (storedTheme === "light") {
-        document.querySelector("img#theme-switch").src = "images/moon.svg";
-        document.body.classList.add("light");
-        document.body.classList.remove("dark");
-    } else {
-        if (prefersDarkScheme) {
-            document.querySelector("img#theme-switch").src = "images/sun.svg";
-            document.body.classList.add("dark");
-            document.body.classList.remove("light");
-        } else if (prefersLightScheme) {
-            document.querySelector("img#theme-switch").src = "images/moon.svg";
-            document.body.classList.add("light");
-            document.body.classList.remove("dark");
-        }
-    }
-}
