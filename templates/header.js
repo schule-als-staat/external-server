@@ -1,3 +1,7 @@
+/**
+ * Updates the theme switch icon based on the current theme.
+ * If the theme is dark, the sun icon is displayed. Otherwise, the moon icon is displayed.
+ */
 function updateThemeSwitchIcon() {
     const themeIcon = document.querySelector("img#theme-switch");
     if (document.body.classList.contains("dark")) {
