@@ -9,24 +9,14 @@
     --icon-moon: url("/images/moon.svg");
     --icon-sun: url("/images/sun.svg");
 
-    /* PRIMARY COLORS - not fitted to the lighter accent color*/
+    /* PRIMARY COLORS */
 
-    --color-primary-a0: #006d8f;
-    --color-primary-a10: #105771;
-    --color-primary-a20: #154154;
-    --color-primary-a30: #142d39;
-    --color-primary-a40: #101a1f;
+    --color-primary-a0:  #007fa6;
+    --color-primary-a10:  #136482;
+    --color-primary-a20:  #184b60;
+    --color-primary-a30:  #163340;
+    --color-primary-a40:  #111d23;
     --color-on-primary: #ffffff;
-
-
-    /* ORIGINAL ACCENT COLORS */
-
-    /* --color-accent-a0: #69008f;
-    --color-accent-a10: #540b71;
-    --color-accent-a20: #400f54;
-    --color-accent-a30: #2d0f39;
-    --color-accent-a40: #1b0b20;
-    --color-on-accent: #ffffff; */
 
     /* LIGHTER ACCENT COLORS */
 
