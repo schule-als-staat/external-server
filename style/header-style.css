@@ -12,7 +12,7 @@ header {
     top: 0;
     z-index: 30;
 
-    background-color: var(--color-primary-a0);
+    background-color: var(--color-primary);
     color: var(--color-on-primary);
     border-bottom: 1px solid var(--color-on-primary);
     padding: var(--spacing) var(--root-spacing);
@@ -93,7 +93,7 @@ header {
 
 /* || Navigation Bar*/
 aside {
-    background-color: var(--color-primary-a20);
+    background-color: var(--color-primary-selected);
     height: calc(100vh - var(--side-nav-offset)); /* set by the Javascript */
     overflow: hidden;
 
@@ -128,13 +128,13 @@ aside a,
 aside a:hover,
 #theme-switch:hover,
 #close-btn:hover {
-    background-color: var(--color-primary-a10);
+    background-color: var(--color-primary-hover);
 }
 
 aside a.selected,
 #theme-switch:active,
 #close-btn:active {
-    background-color: var(--color-primary-a0);
+    background-color: var(--color-primary);
 }
 
 .nav-bar-top {
