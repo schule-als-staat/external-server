@@ -7,7 +7,6 @@
     src: url("../font/Lato-Regular.ttf");
 }
 
-/* || General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,24 +16,71 @@
     transition-duration: var(--transition-duration);
 }
 
+/* || Root layout */
+
 body {
+    min-height: 100vh;
     font-family: "lato";
     background-color: var(--color-background);
     color: var(--color-text);
-    min-height: 100vh;
 
     word-wrap: break-word;
     -webkit-hyphens: auto;
     hyphens: auto;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "side-bar main"
+        "side-bar footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    justify-content: stretch;
+    grid-auto-flow: row;
+
+    transition: grid-template-columns var(--transition-duration);
+    transition-timing-function: ease-in-out;
+}
+
+body.nav-bar-hidden {
+    grid-template-columns: 0 1fr !important;
+}
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: side-bar;
 }
 
 .content {
-    margin: 0 var(--root-spacing);
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 100% !important;
+        grid-auto-flow: column;
+    }
+
+    body.nav-bar-hidden {
+        grid-template-columns: 100% !important;
+    }
+}
+
+/* || General Styles */
+
+.content {
+    padding: 0 var(--root-spacing);
     font-size: 18px;
-    flex-grow: 1;
 }
 
 .card {
@@ -56,6 +102,7 @@ body {
 }
 
 /* || Text */
+
 p {
     margin-bottom: var(--spacing);
 }
@@ -109,6 +156,7 @@ a {
 }
 
 /* || Media */
+
 .image,
 video {
     width: 100%;
@@ -124,6 +172,7 @@ video {
 }
 
 /* || Tables */
+
 table {
     width: 100%;
     max-width: var(--media-max-width);
@@ -147,6 +196,7 @@ th {
 }
 
 /* || Utility */
+
 .space-horizontal,
 .space-vertical {
     display: flex;
@@ -211,7 +261,6 @@ th {
 .error *:hover {
     color: var(--color-warning);
 }
-
 
 .error p,
 .error a {

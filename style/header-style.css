@@ -5,23 +5,16 @@ this file is imported into the main style which already
 imports the values
 */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
+/* || Header */
 header {
     position: -webkit-sticky;
-    /* Safari */
     position: sticky;
     top: 0;
-    z-index: 10;
-}
+    z-index: 30;
 
-/* || Top Bar */
-.top-bar {
     background-color: var(--color-primary-a0);
     color: var(--color-on-primary);
+    border-bottom: 1px solid var(--color-on-primary);
     padding: var(--spacing) var(--root-spacing);
 
     display: flex;
@@ -35,7 +28,12 @@ header {
     flex-grow: 1;
     margin: 0;
     margin-left: 20px;
-    font-size: 40px;
+    font-size: 35px;
+}
+
+.menu-icon {
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
@@ -43,149 +41,169 @@ header {
         font-size: 25px;
     }
 
-    #sals-logo,
-    #mbg-logo {
+    #sals-logo img,
+    #mbg-logo img {
         height: 45px;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .top-bar {
+    .header {
         padding: var(--spacing);
     }
 
-    #sals-logo,
-    #mbg-logo {
+    #title {
+        font-size: 20px;
+    }
+
+    #sals-logo img,
+    #mbg-logo img {
         height: 40px;
     }
 }
 
 @media only screen and (max-width: 650px) {
-    #title {
-        font-size: 20px;
+    #sals-logo img,
+    #mbg-logo img,
+    #menu-icon {
+        height: 35px;
     }
-}
 
-@media only screen and (max-width: 600px) {
+    #sals-logo {
+        flex-grow: 1;
+        align-self: flex-start;
+    }
+
     #title {
         display: none;
     }
 }
 
-@media only screen and (max-width: 400px) {
-    #sals-logo,
-    #mbg-logo {
-        height: 35px !important;
+@media only screen and (max-width: 380px) {
+    #mbg-logo,
+    #title {
+        display: none;
+    }
+
+    #sals-logo {
+        flex-grow: initial;
+        align-self: initial;
     }
 }
 
 /* || Navigation Bar*/
-.nav-header {
+aside {
+    background-color: var(--color-primary-a20);
+    height: calc(100vh - var(--side-nav-offset)); /* set by the Javascript */
+    overflow: hidden;
+
+    position: sticky;
+    top: var(--side-nav-offset);
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .overlay {
     display: none;
 }
 
-.nav-container {
-    background-color: var(--color-primary-a20);
-}
-
-.nav-container nav {
-    display: flex;
-    flex-direction: row;
-}
-
 /* || Navigation links */
-.nav-container a,
-#menu-title {
+aside a,
+#theme-switch,
+#close-btn {
     color: var(--color-on-primary);
     text-decoration: none;
-    margin: 0;
     padding: var(--spacing);
     box-sizing: border-box;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     transition: background-color var(--transition-duration);
 }
 
-.nav-container nav :first-child {
-    border-bottom-left-radius: 0;
-}
-
-.nav-container nav :last-child {
-    border-bottom-right-radius: 0 !important;
-}
-
-.nav-container a:hover {
+aside a:hover,
+#theme-switch:hover,
+#close-btn:hover {
     background-color: var(--color-primary-a10);
 }
 
-.nav-container a.selected {
+aside a.selected,
+#theme-switch:active,
+#close-btn:active {
     background-color: var(--color-primary-a0);
+}
+
+.nav-bar-top {
+    display: flex;
 }
 
 /* || Icon for switching themes */
-#theme-switch {
-    width: 1.5em;
-    padding: 0 var(--spacing);
+#theme-switch,
+#close-btn {
+    --icon-height: 1.5em;
+    height: calc(var(--icon-height) + 2 * var(--spacing));
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+#close-btn {
+    display: none; /* hide on big screens */
     margin-left: auto;
-    align-self: stretch;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    transition: background-color var(--transition-duration);
 }
 
-#theme-switch:hover {
-    background-color: var(--color-primary-a10);
-}
-
-#theme-switch:active {
-    background-color: var(--color-primary-a0);
-}
-
-/* Dropdown navigation for smaller screens */
 @media only screen and (max-width: 900px) {
-    .nav-header {
-        display: flex;
-        justify-content: space-between;
+    aside {
+        display: block;
+        max-width: 90%;
+        position: fixed;
+        top: var(--side-nav-offset);
+        left: 0;
+        bottom: 0;
+        transition: left var(--transition-duration);
+    }
+
+    .nav-bar-hidden aside {
+        /* move the bar out of the viewport */
+        left: -100%;
+    }
+
+    aside + .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+
+        background-color: black;
+        opacity: 0.8;
+        transition: opacity var(--transition-duration);
         cursor: pointer;
-        transition: border-bottom var(--transition-duration) ease-out;
     }
 
-    .menu-icon {
-        padding-right: var(--spacing);
+    .nav-bar-hidden aside + .overlay {
+        pointer-events: none;
+        opacity: 0;
     }
 
-    .nav-container nav {
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: var(--color-primary-a20);
-        transform-origin: top;
-        transition: transform var(--transition-duration) ease-out;
+    #close-btn {
+        display: block;
     }
+}
 
-    .nav-container a {
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .nav-header {
-        border-bottom: transparent solid 1px;
-    }
-
-    .nav-header:has(~ nav.visible) {
-        border-bottom: var(--color-on-secondary) solid 1px;
-    }
-
-    .nav-container nav {
-        transform: scaleY(0);
-    }
-
-    .nav-container nav.visible {
-        transform: scaleY(1);
-    }
-
-    #theme-switch {
-        height: 1.5rem;
-        width: 100%;
-        border-radius: 0;
-        padding: var(--spacing) 0;
+@media only screen and (min-width: 901px) {
+    aside nav {
+        word-wrap: initial;
+        -webkit-hyphens: initial;
+        hyphens: initial;
+        white-space: nowrap;
+        overflow: hidden;
+        direction: rtl;
+        text-align: left;
     }
 }
