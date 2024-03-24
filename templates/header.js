@@ -1,16 +1,3 @@
-/**
- * Updates the theme switch icon based on the current theme.
- * If the theme is dark, the sun icon is displayed. Otherwise, the moon icon is displayed.
- */
-function updateThemeSwitchIcon() {
-    const themeIcon = document.querySelector("img#theme-switch");
-    if (document.body.classList.contains("dark")) {
-        themeIcon.src = "images/sun.svg";
-    } else {
-        themeIcon.src = "images/moon.svg";
-    }
-}
-
 function toggleNavBarVisibility() {
     document.body.classList.toggle("nav-bar-hidden");
 }
@@ -111,16 +98,3 @@ function toggleNavBarVisibility() {
         adaptNavBarToScreenWidth();
     };
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-    const allElements = document.querySelectorAll("body, body *");
-    allElements.forEach((element) => {
-        element.style.transitionDuration = "0s";
-    });
-
-    const style = getComputedStyle(document.body);
-    const duration = style.getPropertyValue("--transition-duration");
-    allElements.forEach((element) => {
-        element.style.transitionDuration = duration;
-    });
-});

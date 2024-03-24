@@ -4,22 +4,21 @@
  * the theme will be set based on the system's preferred color scheme.
  */
 function applyTheme() {
-    const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const themeIcon = document.querySelector("img#theme-switch");
+    const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
 
     if (theme === "dark") {
         document.body.classList.add("dark");
         document.body.classList.remove("light");
-        if (themeIcon) {
-            themeIcon.src = "images/sun.svg";
-        }
     } else {
         document.body.classList.add("light");
         document.body.classList.remove("dark");
-        if (themeIcon) {
-            themeIcon.src = "images/moon.svg";
-        }
     }
+
+    updateThemeSwitchIcon()
 }
 
 /**
@@ -40,7 +39,32 @@ function switchTheme() {
 }
 
 /**
+ * Updates the theme switch icon based on the current theme.
+ * If the theme is dark, the sun icon is displayed. Otherwise, the moon icon is displayed.
+ */
+function updateThemeSwitchIcon() {
+    const themeIcon = document.querySelector("img#theme-switch");
+    if (document.body.classList.contains("dark")) {
+        themeIcon.src = "images/sun.svg";
+    } else {
+        themeIcon.src = "images/moon.svg";
+    }
+}
+
+/**
  * Event listener for the DOMContentLoaded event.
  * Calls the applyTheme function to set the theme when the DOM is fully loaded.
  */
-document.addEventListener("DOMContentLoaded", applyTheme);
+document.addEventListener("DOMContentLoaded", () => {
+
+    // temporary disable the theme animation to prevent flashing
+    document.body.classList.add("no-theme-animation");
+
+    applyTheme();
+
+    // let the browser reflect the DOM changes on the screen
+    window.setTimeout(() => {
+        // enable the animation when switching themes
+        document.body.classList.remove("no-theme-animation");
+    }, 50);
+});

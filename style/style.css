@@ -16,6 +16,11 @@
     transition-duration: var(--transition-duration);
 }
 
+body.no-theme-animation,
+.no-theme-animation * {
+    transition: none;
+}
+
 /* || Root layout */
 
 body {
@@ -38,8 +43,8 @@ body {
     justify-content: stretch;
     grid-auto-flow: row;
 
-    transition: grid-template-columns var(--transition-duration);
-    transition-timing-function: ease-in-out;
+    transition-property: grid-template-columns, background-color, color;
+    transition-duration: var(--transition-duration);
 }
 
 body.nav-bar-hidden {
