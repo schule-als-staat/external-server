@@ -5,11 +5,6 @@ this file is imported into the main style which already
 imports the values
 */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 footer {
     display: flex;
     flex-direction: row;
