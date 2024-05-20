@@ -155,6 +155,11 @@ aside a.selected,
     margin-left: auto;
 }
 
+#theme-switch {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 @media only screen and (max-width: 900px) {
     aside {
         display: block;
