@@ -97,11 +97,11 @@ function toggleNavBarVisibility() {
         adjustNavBar();
         adaptNavBarToScreenWidth();
     };
-})();
 
-fetch("https://usmb.local/")
-    .then(() => {
-        const internalLink = document.querySelector("#internal");
-        internalLink.style.display = "block";
-    })
-    .catch(() => {});
+    fetch("https://usmb.local/")
+        .then(() => {
+            const internalLink = document.querySelector("#internal");
+            internalLink.style.display = "block";
+        })
+        .catch(() => {});
+})();
