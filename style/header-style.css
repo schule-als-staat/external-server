@@ -160,6 +160,10 @@ aside a.selected,
     border-bottom-left-radius: 0;
 }
 
+#internal {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
     aside {
         display: block;

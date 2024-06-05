@@ -34,8 +34,8 @@ function toggleNavBarVisibility() {
                 <img src="images/sals-white.svg" alt="sals-logo" width="50" height="50"/>
             </a>
 
-            <h1 id="title">United States of Max-Born</h1>
-
+            <h1 id="title">United States of Max-Born <p id="internal"><a href="https://usmb.local/">Link zur internen Website</a></p></h1>
+            
             <a id="mbg-logo" href="https://max-born-gymnasium.de/">
                 <img src="images/mbg-white.svg" alt="mbg-logo" height="50"/>
             </a>
@@ -98,3 +98,10 @@ function toggleNavBarVisibility() {
         adaptNavBarToScreenWidth();
     };
 })();
+
+fetch("https://usmb.local/")
+    .then(() => {
+        const internalLink = document.querySelector("#internal");
+        internalLink.style.display = "block";
+    })
+    .catch(() => {});
