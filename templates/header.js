@@ -99,9 +99,10 @@ function toggleNavBarVisibility() {
     };
 
     fetch("https://usmb.local/")
-        .then(() => {
-            const internalLink = document.querySelector("#internal");
-            internalLink.style.display = "block";
+        .then((response) => {
+            if (response.ok || response.status === 302) {
+                document.getElementById("internal").style.display = "block";
+            }
         })
-        .catch(() => {});
+        .catch((error) => {});
 })();
