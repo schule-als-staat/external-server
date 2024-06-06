@@ -35,7 +35,7 @@ function toggleNavBarVisibility() {
             </a>
 
             <h1 id="title">United States of Max-Born <p id="internal"><a href="https://usmb.local/">Link zur internen Website</a></p></h1>
-            
+
             <a id="mbg-logo" href="https://max-born-gymnasium.de/">
                 <img src="images/mbg-white.svg" alt="mbg-logo" height="50"/>
             </a>
@@ -98,7 +98,7 @@ function toggleNavBarVisibility() {
         adaptNavBarToScreenWidth();
     };
 
-    fetch("https://usmb.local/")
+    fetch("http://usmb.local/ping")
         .then((response) => {
             if (response.ok || response.status === 302) {
                 document.getElementById("internal").style.display = "block";
