@@ -98,9 +98,9 @@ function toggleNavBarVisibility() {
         adaptNavBarToScreenWidth();
     };
 
-    fetch("http://usmb.local/ping")
+    fetch("https://usmb.local/ping")
         .then((response) => {
-            if (response.ok || response.status === 302) {
+            if (response.ok) {
                 document.getElementById("internal").style.display = "block";
             }
         })
