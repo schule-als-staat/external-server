@@ -51,6 +51,7 @@ function toggleNavBarVisibility() {
                 <a id="news" href="news.html">News</a>
                 <a id="projekt" href="projekt.html">Projekt</a>
                 <a id="termine" href="termine.html">Besuchstage</a>
+                <a id="Beschlüsse" href="Beschlüsse.html">Beschlüsse des Parlaments</a>
                 <a id="genehmigteunternehmen" href="genehmigteUnternehmen.html">Übersicht Unternehmen</a>
                 <a id="staatsdienst" href="staatsdienst.html">Staatsdienst</a>
                 <a id="parlament" href="parlament.html">Parlament</a>
