@@ -52,7 +52,6 @@ function toggleNavBarVisibility() {
                 <a id="projekt" href="projekt.html">Projekt</a>
                 <a id="termine" href="termine.html">Besuchstage</a>
                 <a id="genehmigteunternehmen" href="genehmigteUnternehmen.html">Übersicht Unternehmen</a>
-                <a id="staatsdienst" href="staatsdienst.html">Staatsdienst</a>
                 <a id="Hygiene" href="Hygiene.html">Hygieneverordnung</a>
                 <a id="Strafgesetzbuch" href="Strafgesetzbuch.html">Strafgesetzbuch</a>
                 <a id="verfassung" href="verfassung.html">Verfassung</a>
